@@ -5,6 +5,11 @@
 	float: left;
 }
 
+#stereo{
+	border: 1px solid black;
+	z-index: 1;
+}
+
 #play{
 	background-color: green;
 }
