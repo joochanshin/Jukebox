@@ -1,0 +1,17 @@
+.button{
+	width: 100px;
+	height: 100px;
+	color: white;
+}
+#play{
+	background-color: green;
+}
+#pause{
+	background-color: blue;
+}
+#volUp{
+	background-color: red;
+}
+#volDown{
+	background-color: orange;
+}
