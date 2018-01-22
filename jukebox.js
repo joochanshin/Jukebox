@@ -10,7 +10,7 @@ var song = document.getElementById("player");
 song.addEventListener('ended',function(){
 	song.setAttribute("src", Jukebox.playlist[index]);
 	index++;
-	if(index === Jukebox.playlist.length){
+	if(index === Jukebox.playlist.length-1){
 		index = 0;
 	}
 	
@@ -27,13 +27,14 @@ var Jukebox = {
 		song.pause();
 	},
 	next: function(){
-		if(index === Jukebox.playlist.length){
+		if(index === Jukebox.playlist.length-1){
 			index = 0;
 			song.setAttribute("src", Jukebox.playlist[index]);
 		}else{
 			index++;
 			song.setAttribute("src", Jukebox.playlist[index]);
 		}
+		console.log(index);
 	},
 	previous: function(){
 		if(index === 0){
