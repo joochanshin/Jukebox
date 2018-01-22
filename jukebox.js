@@ -1,4 +1,5 @@
 var bool = true;
+var index = 0;
 
 function __hide__ () {
 	document.getElementById("player").style.display = "none";
@@ -6,8 +7,17 @@ function __hide__ () {
 
 var song = document.getElementById("player");
 
+song.addEventListener('ended',function(){
+	song.setAttribute("src", Jukebox.playlist[index]);
+	index++;
+	if(index === Jukebox.playlist.length){
+		index = 0;
+	}
+	
+});
+
 var Jukebox = {
-	playlist: [],
+	playlist: ["audio/birds.mp3", "audio/next.mp3"],//next.mp3 is to check if it works
 	play: function(){	//	plays song
 		bool = true;
 		song.play();
@@ -15,6 +25,23 @@ var Jukebox = {
 	pause: function(){	//	pauses song
 		bool = false;
 		song.pause();
+	},
+	next: function(){
+		if(index === Jukebox.playlist.length){
+			index = 0;
+			song.setAttribute("src", Jukebox.playlist[index]);
+		}else{
+			index++;
+			song.setAttribute("src", Jukebox.playlist[index]);
+		}
+	},
+	previous: function(){
+		if(index === 0){
+			song.setAttribute("src", Jukebox.playlist[index]);
+		} else {
+			index--;
+			song.setAttribute("src", Jukebox.playlist[index]);
+		}
 	},
 	load: function(){	//	loads music
 		var new_song = "audio/" + prompt("Enter song name") + ".mp3";
@@ -29,7 +56,7 @@ var Jukebox = {
 		if(song.volume > 0)
 			song.volume -= .1;
 	},
-	random: function(){	//	randomizes array
+	random: function(){		//	randomizes array
 		var currentIndex = this.playlist.length, temporaryValue, randomIndex;
 
 		while (0 !== currentIndex) {
@@ -39,9 +66,9 @@ var Jukebox = {
 		    temporaryValue = this.playlist[currentIndex];
 		    this.playlist[currentIndex] = this.playlist[randomIndex];
 		    this.playlist[randomIndex] = temporaryValue;
-		  }
-
-		  return this.playlist;
+		}
+		console.log("Randomized");
+		return this.playlist;
 	},
 	__add__: function(song){	//	adds song from songs to playlist
 		this.playlist.push(song);
@@ -50,5 +77,6 @@ var Jukebox = {
 };
 
 //Jukebox.load();
+document.getElementById("current").innerHTML = "Current song: " + Jukebox.playlist[index];
 
 

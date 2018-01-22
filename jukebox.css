@@ -3,15 +3,35 @@
 	height: 100px;
 	color: white;
 }
+
 #play{
 	background-color: green;
 }
+
 #pause{
 	background-color: blue;
 }
+
+#next{
+	background-color: teal;
+}
+
+#previous{
+	background-color: pink;
+}
+
 #volUp{
 	background-color: red;
 }
+
 #volDown{
 	background-color: orange;
+}
+
+#load{
+	background-color: purple;
+}
+
+#random{
+	background-color: grey;
 }
