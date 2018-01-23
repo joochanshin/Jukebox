@@ -1,14 +1,32 @@
 .button{
-	width: 100px;
-	height: 100px;
+	width: 50px;
+	height: 25px;
 	color: white;
 	float: left;
+	text-align: center;
+	font-size: .7em;
+	margin-left: 2px;
+	margin-right: 2px;
 }
 
 #stereo{
+	position: absolute;
+	width: 1200px;
+	height: 500px;
+	border: 1px solid blue;
+	background-color: grey;
+	margin-top: 100px;
+	margin-left: 100px;
+}
+
+#buttonWrap{
+	display: block;
 	border: 1px solid black;
 	z-index: 2;
 	position: absolute;
+	float: left;
+	margin-top: 150px;
+	margin-left: 500px;
 }
 
 #play{
@@ -40,5 +58,179 @@
 }
 
 #random{
-	background-color: grey;
+	background-color: black;
 }
+
+#current{
+	width: 400px;
+	height: 50px;
+	border: 1px solid green;
+	background-color: white;
+	font-size: 1.8em;
+	z-index: 2;
+	position: absolute;
+	text-align: center;
+	margin-top: 300px;
+	margin-left: 500px;
+}
+
+.speaker{
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background-color: #535757;
+	z-index: 2;
+	position: absolute;
+}
+
+.s_left{
+	margin-left: 150px;
+	margin-top: 200px;
+}
+
+.s_right{
+	margin-left: 950px;
+	margin-top: 200px;
+}
+
+.in_speaker{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	background-color: black;
+	position: absolute;
+}
+
+.is_left{
+	margin-left: 75px;
+	margin-top: 75px;
+}
+
+.is_right{
+	margin-left: 75px;
+	margin-top: 75px;
+}
+
+.s_line{
+	position: absolute;
+	width: 300px;
+	height: 300px;
+	z-index: 3;
+	border-radius: 50%;
+	border: 3px solid white;
+}
+
+.lines{
+	position: absolute;
+	z-index: 4;
+	width: 10px;
+	height: 100px;
+	background-color: black;
+}
+.smlines{
+	position: absolute;
+	z-index: 4;
+	width: 5px;
+	height: 75px;
+	background-color: black;
+}
+/*Big Lines (left)*/
+	.sl_left1{
+		transform: rotate(-45deg);
+		margin-top: -25px;
+	}
+	.sl_left2{
+		transform: rotate(45deg);
+		margin-left: 280px;
+		margin-top: -25px;
+	}
+	.sl_left3{
+		transform: rotate(0deg);
+		margin-left: 150px;
+		margin-top: -75px;
+	}
+	.sl_left4{
+		transform: rotate(90deg);
+		margin-left: 320px;
+		margin-top: 100px;
+	}
+	/*Bottom lines*/
+	.sl_left5{
+		transform: rotate(-45deg);
+		margin-top: 225px;
+		margin-left: 280px;
+	}
+
+	.sl_left6{
+		transform: rotate(45deg);
+		margin-top: 225px;
+	}
+
+	.sl_left7{
+		transform: rotate(0deg);
+		margin-left: 150px;
+		margin-top: 275px;
+	}
+
+	.sl_left8{
+		transform: rotate(90deg);
+		margin-left: -30px;
+		margin-top: 100px;
+	}
+
+/*Small Lines (right)*/
+	
+	.sml_left1{
+		transform: rotate(-22.5deg);
+		margin-left: 75px;
+		margin-top: -25px;
+	}
+
+	.sml_left2{
+		transform: rotate(22.5deg);
+		margin-left: 225px;
+		margin-top: -25px;
+	}
+
+	.sml_left3{
+		transform: rotate(-67.5deg);
+		margin-top: 50px;
+	}
+
+	.sml_left4{
+		transform: rotate(67.5deg);
+		margin-top: 50px;
+		margin-left: 300px;
+	}
+
+	.sml_left5{
+		transform: rotate(-22.5deg);
+		margin-left: 225px;
+		margin-top: 250px;
+	}
+
+	.sml_left6{
+		transform: rotate(22.5deg);
+		margin-left: 75px;
+		margin-top: 250px;
+	}
+
+	.sml_left7{
+		transform: rotate(-67.5deg);
+		margin-top: 50px;
+		margin-left: 300px;
+		margin-top: 175px;
+	}
+
+	.sml_left8{
+		transform: rotate(67.5deg);
+		margin-top: 175px;
+	}
+
+
+
+
+
+
+
+

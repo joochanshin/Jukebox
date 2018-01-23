@@ -13,7 +13,7 @@ song.addEventListener('ended',function(){
 	if(index === Jukebox.playlist.length-1){
 		index = 0;
 	}
-	document.getElementById("current").innerHTML = "Current song: " + Jukebox.playlist[index];
+	document.getElementById("current").innerHTML = Jukebox.playlist[index];
 });
 
 var Jukebox = {
@@ -35,7 +35,7 @@ var Jukebox = {
 			song.setAttribute("src", this.playlist[index]);
 		}
 		console.log(index);
-		document.getElementById("current").innerHTML = "Current song: " + this.playlist[index];
+		document.getElementById("current").innerHTML = this.playlist[index];
 	},
 	previous: function(){
 		if(index === 0){
@@ -44,7 +44,7 @@ var Jukebox = {
 			index--;
 			song.setAttribute("src", this.playlist[index]);
 		}
-		document.getElementById("current").innerHTML = "Current song: " + this.playlist[index];
+		document.getElementById("current").innerHTML = this.playlist[index];
 	},
 	load: function(){	//	loads music
 		var new_song = "audio/" + prompt("Enter song name") + ".mp3";
@@ -80,7 +80,7 @@ var Jukebox = {
 };
 
 //Jukebox.load();
-document.getElementById("current").innerHTML = "Current song: " + Jukebox.playlist[index];
+document.getElementById("current").innerHTML = Jukebox.playlist[index];
 // setInterval(, 30000);
 
-
+ 
