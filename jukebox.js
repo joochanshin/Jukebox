@@ -16,15 +16,32 @@ song.addEventListener('ended',function(){
 	document.getElementById("current").innerHTML = Jukebox.playlist[index];
 });
 
+var lines = document.getElementsByClassName("lines");
+var smlines = document.getElementsByClassName("smlines");
+var speaker = document.getElementsByClassName("speaker");
+
 var Jukebox = {
 	playlist: ["audio/birds.mp3", "audio/next.mp3"],//next.mp3 is to check if it works
 	play: function(){	//	plays song
 		bool = true;
 		song.play();
+		for(let i = 0; i < lines.length; i++){
+			lines[i].style.display = "inline";
+			smlines[i].style.display = "inline";
+		}
+		speaker[0].style.animation = "pump .5s ease-in infinite";
+		speaker[1].style.animation = "pump .5s ease-in infinite";
+
 	},
 	pause: function(){	//	pauses song
 		bool = false;
 		song.pause();
+		for(let i = 0; i < lines.length; i++){
+			lines[i].style.display = "none";
+			smlines[i].style.display = "none";
+		}
+		speaker[0].style.animation = "none";
+		speaker[1].style.animation = "none";
 	},
 	next: function(){
 		if(index === Jukebox.playlist.length-1){
