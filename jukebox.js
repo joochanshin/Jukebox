@@ -54,7 +54,9 @@ var Jukebox = {
 			song.setAttribute("src", this.playlist[index]);
 		}
 		console.log(index);
+		song.play();
 		document.getElementById("current").innerHTML = this.playlist[index];
+		gradient(bool);
 	},
 	previous: function(){
 		if(index === 0){
@@ -63,7 +65,9 @@ var Jukebox = {
 			index--;
 			song.setAttribute("src", this.playlist[index]);
 		}
+		song.play();
 		document.getElementById("current").innerHTML = this.playlist[index];
+		gradient(bool);
 	},
 	load: function(){	//	loads music
 		var new_song = "audio/" + prompt("Enter song name") + ".mp3";
